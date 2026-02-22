@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/devicons/public_html
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R dist/* $DEPLOYPATH/
+    - /bin/cp -R dist/.* $DEPLOYPATH/ || true
+    - /bin/cp -R dist/assets $DEPLOYPATH/ || true
+    - /bin/cat > $DEPLOYPATH/.htaccess <<'EOF'
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+EOF
