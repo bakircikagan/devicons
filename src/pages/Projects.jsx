@@ -200,7 +200,6 @@ const PROJECTS = [
       hero: "/projects/esenai-tower/hero.png",
       top1: "/projects/esenai-tower/top1.png",
       top2: "/projects/esenai-tower/top2.png",
-      top3: "/projects/esenai-tower/top3.png",
     },
   },
   {
