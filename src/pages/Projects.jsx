@@ -69,6 +69,161 @@ const PROJECTS = [
       top2: "/projects/brooklyn/top2.png",
     },
   },
+  {
+    slug: "mega-tall-tower-1",
+    name: "Mega Tall – Tower 1",
+    meta: [
+      ["Height", "703 m"],
+      ["Floors", "162"],
+      ["Location", "St. Petersburg, Russia"],
+      ["Year", "2022 – Continuing"],
+      ["Owner", "Rencons Construction"],
+    ],
+    scope: [
+      "Design / constructability review",
+      "Value engineering for structural engineering",
+      "Design solutions in collaboration with manufacturers",
+      "Coordination of façade systems with specialized suppliers",
+      "Coordination of vertical transportation systems",
+    ],
+    images: {
+      hero: "/projects/mega-tall-tower-1/hero.png",
+      top1: "/projects/mega-tall-tower-1/top1.png",
+      top2: "/projects/mega-tall-tower-1/top2.png",
+    },
+  },
+  {
+    slug: "mega-tall-tower-2",
+    name: "Mega Tall – Tower 2",
+    meta: [
+      ["Height", "555 m"],
+      ["Floors", "104"],
+      ["Location", "St. Petersburg, Russia"],
+      ["Year", "2022 – Continuing"],
+      ["Owner", "Rencons Construction"],
+    ],
+    scope: [
+      "Design / constructability review",
+      "Value engineering for structural engineering",
+      "Design solutions in collaboration with manufacturers",
+      "Coordination of façade systems with specialized suppliers",
+      "Coordination of vertical transportation systems",
+    ],
+    images: {
+      hero: "/projects/mega-tall-tower-2/hero.png",
+      top1: "/projects/mega-tall-tower-2/top1.png",
+      top2: "/projects/mega-tall-tower-2/top2.png",
+    },
+  },
+  {
+    slug: "one-tower-mibc",
+    name: "One Tower in MIBC",
+    meta: [
+      ["Height", "404 m"],
+      ["Floors", "104"],
+      ["Location", "Moscow, Russia"],
+      ["Year", "2021"],
+      ["Owner", "Mosinzproekt"],
+    ],
+    scope: [
+      "Design and constructability review",
+      "Value engineering for structural engineering",
+    ],
+    images: {
+      hero: "/projects/mibc/hero.png",
+      top1: "/projects/mibc/top1.png",
+      top2: "/projects/mibc/top2.png",
+    },
+  },
+  {
+    slug: "neva-towers-mibc",
+    name: "Neva Towers in MIBC",
+    meta: [
+      ["T1 Tower", "297 m – 68 floors"],
+      ["T2 Tower", "366 m – 79 floors"],
+      ["Location", "Moscow, Russia"],
+      ["Year", "2016 – 2019"],
+      ["Owner", "Rencons Development"],
+      ["Concept", "HOK & FXCollaborative"],
+    ],
+    scope: [
+      "Management / supervision of architectural design works execution",
+      "Coordination and supervision of all design disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
+      "Design solutions in collaboration with manufacturers (Façade systems & VT)",
+      "Architectural fit-out works and detailed coordination of interior finishes",
+      "On-site implementation supervision",
+    ],
+    images: {
+      hero: "/projects/neva/hero.png",
+      top1: "/projects/neva/top1.png",
+      top2: "/projects/neva/top2.png",
+      top3: "/projects/neva/top3.png",
+    },
+  },
+  {
+    slug: "icity-business-center",
+    name: "iCity Business Center",
+    meta: [
+      ["T1 Tower", "145 m"],
+      ["T2 Tower", "260 m"],
+      ["Location", "Moscow, Russia"],
+      ["Year", "2019 – 2021"],
+      ["Owner", "MR Group"],
+      ["Concept", "JAHN Architects"],
+    ],
+    scope: [
+      "Management / supervision of architectural design works execution",
+      "Coordination and supervision of all design disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
+      "Design solutions in collaboration with manufacturers (Façade systems & VT)",
+      "Architectural shop drawings and detailed coordination of interior finishes",
+    ],
+    images: {
+      hero: "/projects/icity-business-center/hero.png",
+      top1: "/projects/icity-business-center/top1.png",
+      top2: "/projects/icity-business-center/top2.png",
+      top3: "/projects/icity-business-center/top3.png",
+    },
+  },
+  {
+    slug: "esenai-tower",
+    name: "Esentai Tower – Ritz-Carlton",
+    meta: [
+      ["Location", "Almaty, Kazakhstan"],
+      ["Year", "2006 – 2008"],
+      ["Owner", "Capital Partners"],
+    ],
+    scope: [
+      "Design and Constructability Review",
+      "Value Engineering for Structural Engineering",
+    ],
+    images: {
+      hero: "/projects/esenai-tower/hero.png",
+      top1: "/projects/esenai-tower/top1.png",
+      top2: "/projects/esenai-tower/top2.png",
+      top3: "/projects/esenai-tower/top3.png",
+    },
+  },
+  {
+    slug: "lakhta-center-multifunctional",
+    name: "Lakhta Center – Multifunctional Buildings",
+    meta: [
+      ["Location", "St. Petersburg, Russia"],
+      ["Year", "2010 – 2022"],
+      ["Owner", "Renaissance Construction"],
+    ],
+    scope: [
+      "Coordination of façade systems with specialized suppliers",
+      "Coordination and supervision of design works of all disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
+      "Design solutions in collaboration with manufacturers",
+      "Architectural fit-out works including detailed coordination of interior finishes and shop drawings",
+    ],
+    images: {
+      hero: "/projects/lakhta-center-multifunctional/hero.png",
+      top1: "/projects/lakhta-center-multifunctional/top1.png",
+      top2: "/projects/lakhta-center-multifunctional/top2.png",
+      top3: "/projects/lakhta-center-multifunctional/top3.png",
+    },
+  },
 ];
 
 function findProject(slug) {
@@ -137,24 +292,39 @@ function ProjectSlide({ project }) {
 
       {/* Right images + info */}
       <div className="space-y-6 lg:col-span-7">
-        <div className="grid gap-6 sm:grid-cols-2">
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-            <img
-              src={project.images.top1}
-              alt={`${project.name} view 1`}
-              className="h-56 w-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-            <img
-              src={project.images.top2}
-              alt={`${project.name} view 2`}
-              className="h-56 w-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
+        {(() => {
+          const tops = ["top1", "top2", "top3"].filter(
+            (k) => project?.images?.[k]
+          );
+
+          if (tops.length === 0) return null;
+
+          // 1 => 1 column, 2 => 2 columns, 3 => 3 columns on lg
+          const gridCols =
+            tops.length === 1
+              ? "grid-cols-1"
+              : tops.length === 2
+              ? "grid-cols-1 sm:grid-cols-2"
+              : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+
+          return (
+            <div className={`grid gap-6 ${gridCols}`}>
+              {tops.map((k, idx) => (
+                <div
+                  key={k}
+                  className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm"
+                >
+                  <img
+                    src={project.images[k]}
+                    alt={`${project.name} view ${idx + 1}`}
+                    className="h-56 w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Gray info box */}
         <div className="rounded-2xl bg-zinc-200 p-8">
