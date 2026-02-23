@@ -22,7 +22,7 @@ export default function SiteLayout() {
             />
             <div className="leading-tight">
                 <div className="text-sm font-semibold tracking-tight">DEVICONS</div>
-                <div className="text-xs text-zinc-500">devicons.com.tr</div>
+                <div className="text-xs text-zinc-500">Architecture, Engineering, Design & Development Management</div>
             </div>
         </NavLink>
 

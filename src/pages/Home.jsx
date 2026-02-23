@@ -26,7 +26,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-200 sm:mt-5 sm:text-base">
-            Development, Architecture, Engineering and Design Management
+            Architecture, Engineering, Design & Development Management
           </p>
         </div>
       </div>

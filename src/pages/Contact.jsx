@@ -2,13 +2,13 @@ const items = [
   {
     icon: "mail",
     title: "Email",
-    lines: ["info@devicons.com.tr", "info@devicons.us"],
+    lines: ["info@devicons.us", "info@devicons.com.tr"],
     href: "mailto:info@devicons.com.tr",
   },
   {
     icon: "globe",
     title: "Web",
-    lines: ["devicons.com.tr", "devicons.us"]
+    lines: ["devicons.us", "devicons.com.tr"]
   },
   {
     icon: "pin",
