@@ -44,6 +44,7 @@ const PROJECTS = [
       top1: "/projects/cooltoren/top1.png",
       top2: "/projects/cooltoren/top2.png",
     },
+    pastExperience: true
   },
   {
     slug: "brooklyn-tower",
@@ -159,6 +160,7 @@ const PROJECTS = [
       top2: "/projects/neva/top2.png",
       top3: "/projects/neva/top3.png",
     },
+    pastExperience: true
   },
   {
     slug: "icity-business-center",
@@ -183,6 +185,7 @@ const PROJECTS = [
       top2: "/projects/icity-business-center/top2.png",
       top3: "/projects/icity-business-center/top3.png",
     },
+    pastExperience: true
   },
   {
     slug: "esenai-tower",
@@ -221,6 +224,25 @@ const PROJECTS = [
       top1: "/projects/lakhta-center-multifunctional/top1.png",
       top2: "/projects/lakhta-center-multifunctional/top2.png",
       top3: "/projects/lakhta-center-multifunctional/top3.png",
+    },
+  },
+  {
+    slug: "almaty-financial-district",
+    name: "Almaty Financial District – 32 Buildings",
+    meta: [
+      ["Location", "Almaty, Kazakhstan"],
+      ["Year", "2006 – 2009"],
+      ["Developer", "Capital Partners"],
+    ],
+    scope: [
+      "Schematic, design development and construction documents (STR & MEP)",
+      "Construction documents for ARCH, local adaptation of ARCH, STR & MEP",
+      "Design management of all disciplines",
+    ],
+    images: {
+      hero: "/projects/almaty-financial-district/hero.png",
+      top1: "/projects/almaty-financial-district/top1.png",
+      top2: "/projects/almaty-financial-district/top2.png",
     },
   },
 ];
@@ -374,6 +396,11 @@ function ProjectSlide({ project }) {
               </li>
             ))}
           </ul>
+          {project.pastExperience && (
+            <div className="mt-4 text-[12px] italic text-zinc-400 tracking-wide">
+              *Past Experiences in Rencons
+            </div>
+          )}
         </div>
       </div>
     </section>
