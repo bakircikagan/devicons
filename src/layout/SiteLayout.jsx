@@ -15,7 +15,7 @@ export default function SiteLayout() {
         <div className="mx-auto flex max-w-[1400px] items-center gap-10 px-4 py-4 sm:px-6">
         <NavLink to="/" className="flex items-center gap-3">
             <img
-                src="/devicons-navbar-logo.png"
+                src="/devicons-logo.png"
                 alt="DEVICONS"
                 className="h-9 w-auto"
                 loading="eager"
