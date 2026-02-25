@@ -12,30 +12,20 @@ export default function WhoWeAre() {
           </h2>
 
           <p className="text-zinc-600 leading-relaxed">
-            We represent investors with independent technical leadership in real estate development and high-rise construction.
-            Our commitment is to ensure clarity, control, and value at every stage of the project.
+            We are an independent, investor-side technical advisory firm specializing 
+            in high-rise and complex real estate developments. We align development, 
+            design and construction with cost, schedule and risk control — representing 
+            the Owner’s/Investor’s interests at every stage.
           </p>
 
           <ul className="space-y-3 text-zinc-700">
-            <li>• An Independent Technical Partner for Owners / Investors</li>
-            <li>• We work exclusively in the interest of the Owner</li>
-            <li>• One Technical Voice on behalf of the Investor</li>
+            <li>• Independent Technical Partner for Owners / Investors</li>
+            <li>• We work exclusively in the interest of the Owner/Investor</li>
+            <li>• One Technical Voice on Behalf of the Owner/Investor</li>
             <li>• We step in before problems become costs</li>
-            <li>• Owner-focused services across the entire lifecycle</li>
+            <li>• Owner-Focused services across the project lifecycle</li>
           </ul>
         </div>
-
-        {/* Right accent block */}
-        <div className="relative">
-          <div className="absolute -left-6 top-0 h-full w-2 bg-zinc-300" />
-          <div className="rounded-2xl bg-zinc-200 p-6">
-            <p className="text-zinc-700 leading-relaxed">
-              We offer exceptional commitment, providing the technical knowledge and dedication
-              required to manage projects from concept development to completion.
-            </p>
-          </div>
-        </div>
-
       </section>
 
 
@@ -46,9 +36,13 @@ export default function WhoWeAre() {
           <div className="h-16 w-2 bg-zinc-400" />
           <h3 className="serif text-4xl font-light">Vision</h3>
           <p className="text-zinc-600 leading-relaxed">
-            To be a trusted global Owner’s Representative, setting the standard
-            for how investors manage risk, time, and technical complexity in development
-            and construction projects.
+            To be a trusted and preferred independent partner in complex real estate and 
+            high-rise developments, leading with integrity and technical excellence 
+            while setting the benchmark for investor-side representation.
+          </p>
+          <p className="text-zinc-600 leading-relaxed">
+            We envision transforming projects through disciplined risk management, sustainable thinking 
+            and early, value-driven decision-making-ensuring clarity, control and long-term asset performance.
           </p>
         </div>
 
@@ -56,12 +50,12 @@ export default function WhoWeAre() {
           <div className="ml-auto h-16 w-2 bg-zinc-400" />
           <h3 className="serif text-4xl font-light">Mission</h3>
           <p className="text-zinc-600 leading-relaxed">
-            DEVICONS exists to represent the investor with one clear technical voice
+            DEVICONS exists to represent the investor with one clear and independent technical voice 
             throughout the entire project lifecycle.
           </p>
           <p className="text-zinc-600 leading-relaxed">
-            We manage design, coordination, and construction processes to protect value,
-            reduce risk, and enable informed decision-making.
+            We deliver disciplined development, design and construction management solutions with 
+            integrity and collaboration, protecting value, reducing risk from concept to completion.
           </p>
         </div>
 

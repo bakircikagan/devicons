@@ -35,9 +35,9 @@ const PROJECTS = [
     ],
     scope: [
       "Management / supervision of architectural design works execution",
-      "Coordination of design works across disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
-      "Design solutions with manufacturers (Façade systems, etc.)",
-      "Architectural shop drawings and interior finish coordination",
+      "Coordination and supervision of design works of all disciplines and consultants (such as Interior, Structural, Mep, Façade, Fire Protection etc.).",
+      "Design solutions with manufacturers (Façade systems & VT)",
+      "Architectural shop drawings, including detailed coordination of interior finishes",
     ],
     images: {
       hero: "/projects/cooltoren/hero.png",
@@ -149,10 +149,9 @@ const PROJECTS = [
     ],
     scope: [
       "Management / supervision of architectural design works execution",
-      "Coordination and supervision of all design disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
+      "Coordination and supervision of design works of all disciplines and consultants (such as Interior, Structural, Mep, Façade, Fire Protection etc.).",
       "Design solutions in collaboration with manufacturers (Façade systems & VT)",
-      "Architectural fit-out works and detailed coordination of interior finishes",
-      "On-site implementation supervision",
+      "Architectural fit-out works, including detailed coordination of interior finishes, shop drawings, and on-site implementation. ",
     ],
     images: {
       hero: "/projects/neva/hero.png",
@@ -175,7 +174,7 @@ const PROJECTS = [
     ],
     scope: [
       "Management / supervision of architectural design works execution",
-      "Coordination and supervision of all design disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
+      "Coordination and supervision of design works of all disciplines and consultants (such as Interior, Structural, Mep, Façade, Fire Protection etc.). ",
       "Design solutions in collaboration with manufacturers (Façade systems & VT)",
       "Architectural shop drawings and detailed coordination of interior finishes",
     ],
@@ -196,8 +195,7 @@ const PROJECTS = [
       ["Owner", "Capital Partners"],
     ],
     scope: [
-      "Design and Constructability Review",
-      "Value Engineering for Structural Engineering",
+      "Design and Constructability Review, and Value Engineering for Structural Engineering in High Seismic Zone",
     ],
     images: {
       hero: "/projects/esenai-tower/hero.png",
@@ -215,9 +213,9 @@ const PROJECTS = [
     ],
     scope: [
       "Coordination of façade systems with specialized suppliers",
-      "Coordination and supervision of design works of all disciplines (Interior, Structural, MEP, Façade, Fire Protection)",
+      "Coordination and supervision of design works of other disciplines and consultants (such as Interior, Structural, MEP, Façade, Fire Protection etc.). ",
       "Design solutions in collaboration with manufacturers",
-      "Architectural fit-out works including detailed coordination of interior finishes and shop drawings",
+      "Architectural fit-out works, including detailed coordination of interior finishes, shop drawings, and on-site implementation. ",
     ],
     images: {
       hero: "/projects/lakhta-center-multifunctional/hero.png",
@@ -225,6 +223,7 @@ const PROJECTS = [
       top2: "/projects/lakhta-center-multifunctional/top2.png",
       top3: "/projects/lakhta-center-multifunctional/top3.png",
     },
+    pastExperience: true
   },
   {
     slug: "almaty-financial-district",

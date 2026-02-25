@@ -1,54 +1,3 @@
-// const services = [
-//   {
-//     title: "Owner’s Representation",
-//     items: [
-//       "Investor-side technical authority",
-//       "Governance, reporting, decision support",
-//       "Stakeholder alignment and control",
-//     ],
-//   },
-//   {
-//     title: "Development & Design Management",
-//     items: [
-//       "Feasibility and technical strategy",
-//       "Multi-discipline design coordination",
-//       "Deliverable quality and constructability focus",
-//     ],
-//   },
-//   {
-//     title: "Cost, Schedule & Risk Oversight",
-//     items: [
-//       "Early risk identification and mitigation",
-//       "Change impact assessment (time/cost/quality)",
-//       "Technical reviews and executive-ready updates",
-//     ],
-//   },
-//   {
-//     title: "Technical Due Diligence",
-//     items: [
-//       "Site / asset technical review",
-//       "Risk register and gap assessment",
-//       "Recommendations for investment decisions",
-//     ],
-//   },
-//   {
-//     title: "Construction Phase Technical Advisory",
-//     items: [
-//       "Technical control during delivery",
-//       "Review of key technical decisions and changes",
-//       "Quality oversight through documentation and site reviews",
-//     ],
-//   },
-//   {
-//     title: "Specialist Coordination",
-//     items: [
-//       "Façade / structural / MEP interface alignment",
-//       "Manufacturer / supplier coordination support",
-//       "Fit-out documentation and implementation readiness",
-//     ],
-//   },
-// ];
-
 export default function WhatWeDo() {
   return (
     <div className="space-y-28">
@@ -69,13 +18,16 @@ export default function WhatWeDo() {
             className="mx-auto h-64 w-full rounded-xl object-cover"
           />
           <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
-            DEVELOPMENT
+            DESIGN & DEVELOPMENT MANAGEMENT
           </h2>
           <p className="text-sm leading-relaxed text-zinc-600">
-            We manage all design disciplines on behalf of the owner/investor,
-            ensuring alignment between concept, budget, schedule and technical
-            requirements. Value engineering strategies are implemented to
-            optimize cost and performance without compromising long-term value.
+            We manage real estate development on behalf of the Owner/Investor, 
+            with a strong focus on high-rise and complex mixed-use projects.
+            Our scope includes feasibility and market assessments, 
+            defining scope, budget and schedule, coordinating concept and detailed 
+            design with leading architects and engineers, managing permitting processes, 
+            financial oversight and risk monitoring - ensuring early alignment between strategy, 
+            design integrity and long-term asset value.
           </p>
         </div>
 
@@ -90,9 +42,9 @@ export default function WhatWeDo() {
             PRECONSTRUCTION
           </h2>
           <p className="text-sm leading-relaxed text-zinc-600">
-            We support the investor in early project stages by evaluating
-            feasibility, defining technical strategy and identifying key risks
-            before commitments are made.
+              Devicons leads preconstruction planning to ensure projects are fully aligned before execution begins.
+              We assess feasibility, permitting risks, constructability, phasing strategies and budget alignment while refining scope, schedules and mitigation plans. 
+              Through design optimization and value engineering, we identify cost-saving opportunities early and establish a clear execution roadmap.
           </p>
         </div>
 
@@ -107,9 +59,12 @@ export default function WhatWeDo() {
             CONSTRUCTION MANAGEMENT
           </h2>
           <p className="text-sm leading-relaxed text-zinc-600">
-            We represent the investor throughout construction by reviewing
-            technical decisions, assessing changes and monitoring impacts on
-            cost and schedule.
+            Devicons represents the investor throughout construction, ensuring disciplined control of cost, 
+            schedule and quality. Construction management requires discipline, 
+            experience and proactive leadership. 
+            We monitor execution, evaluate changes and act early to prevent issues - protecting 
+            investor interests rather than merely reporting project status.
+
           </p>
         </div>
       </section>
@@ -122,14 +77,13 @@ export default function WhatWeDo() {
 
           <div className="rounded-2xl bg-zinc-200 p-8">
             <ul className="space-y-3 text-sm leading-relaxed text-zinc-700">
-              <li>• Project Development & Feasibility Support</li>
-              <li>• Selecting Designer and Engineer Teams</li>
-              <li>• Design Management (All Disciplines)</li>
-              <li>• Architectural & Interior Works</li>
-              <li>• Civil & Structural Works</li>
-              <li>• Design & Engineering Coordination</li>
-              <li>• Tender & Contractor Coordination</li>
-              <li>• Technical Advisory During Construction</li>
+              <li>• Designer & Consultant Selection Strategy</li>
+              <li>• Integrated Design Management (All Disciplines)</li>  
+              <li>• Architectural & Structural Design Oversight</li>
+              <li>• Tender Strategy & Contractor Alignment</li>
+              <li>• Construction Phase Technical Advisory & Risk Control</li>
+              <li>• Value Engineering & Structural Optimization</li>
+              <li>• Real Estate Development Advisory & Feasibility</li>
             </ul>
           </div>
         </div>
