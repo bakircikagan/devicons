@@ -12,7 +12,7 @@ export default function SiteLayout() {
   return (
     <div className="min-h-screen bg-zinc-100 text-zinc-900">
         <header className="sticky top-0 z-20 border-b border-zinc-200 bg-zinc-100/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center gap-10 px-4 py-4 sm:px-6">
+        <div className="mx-auto flex max-w-[1400px] items-center gap-10 px-4 py-4 sm:px-6">
         <NavLink to="/" className="flex items-center gap-3">
             <img
                 src="/devicons-navbar-logo.png"
@@ -45,12 +45,12 @@ export default function SiteLayout() {
         </div>
       </header>
 
-        <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <main className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6">
             <Outlet />
         </main>
 
       <footer className="border-t border-zinc-200 bg-zinc-100 py-10">
-        <div className="mx-auto max-w-6xl px-4 text-xs text-zinc-500 sm:px-6">
+        <div className="mx-auto max-w-[1400px] px-4 text-xs text-zinc-500 sm:px-6">
           © {new Date().getFullYear()} DEVICONS. All rights reserved.
         </div>
       </footer>

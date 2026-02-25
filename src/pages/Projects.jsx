@@ -69,52 +69,52 @@ const PROJECTS = [
       top2: "/projects/brooklyn/top2.png",
     },
   },
-  {
-    slug: "mega-tall-tower-1",
-    name: "Mega Tall – Tower 1",
-    meta: [
-      ["Height", "703 m"],
-      ["Floors", "162"],
-      ["Location", "St. Petersburg, Russia"],
-      ["Year", "2022 – Continuing"],
-      ["Owner", "Rencons Construction"],
-    ],
-    scope: [
-      "Design / constructability review",
-      "Value engineering for structural engineering",
-      "Design solutions in collaboration with manufacturers",
-      "Coordination of façade systems with specialized suppliers",
-      "Coordination of vertical transportation systems",
-    ],
-    images: {
-      hero: "/projects/mega-tall-tower-1/hero.png",
-      top1: "/projects/mega-tall-tower-1/top1.png",
-      top2: "/projects/mega-tall-tower-1/top2.png",
-    },
-  },
-  {
-    slug: "mega-tall-tower-2",
-    name: "Mega Tall – Tower 2",
-    meta: [
-      ["Height", "555 m"],
-      ["Floors", "104"],
-      ["Location", "St. Petersburg, Russia"],
-      ["Year", "2022 – Continuing"],
-      ["Owner", "Rencons Construction"],
-    ],
-    scope: [
-      "Design / constructability review",
-      "Value engineering for structural engineering",
-      "Design solutions in collaboration with manufacturers",
-      "Coordination of façade systems with specialized suppliers",
-      "Coordination of vertical transportation systems",
-    ],
-    images: {
-      hero: "/projects/mega-tall-tower-2/hero.png",
-      top1: "/projects/mega-tall-tower-2/top1.png",
-      top2: "/projects/mega-tall-tower-2/top2.png",
-    },
-  },
+  // {
+  //   slug: "mega-tall-tower-1",
+  //   name: "Mega Tall – Tower 1",
+  //   meta: [
+  //     ["Height", "703 m"],
+  //     ["Floors", "162"],
+  //     ["Location", "St. Petersburg, Russia"],
+  //     ["Year", "2022 – Continuing"],
+  //     ["Owner", "Rencons Construction"],
+  //   ],
+  //   scope: [
+  //     "Design / constructability review",
+  //     "Value engineering for structural engineering",
+  //     "Design solutions in collaboration with manufacturers",
+  //     "Coordination of façade systems with specialized suppliers",
+  //     "Coordination of vertical transportation systems",
+  //   ],
+  //   images: {
+  //     hero: "/projects/mega-tall-tower-1/hero.png",
+  //     top1: "/projects/mega-tall-tower-1/top1.png",
+  //     top2: "/projects/mega-tall-tower-1/top2.png",
+  //   },
+  // },
+  // {
+  //   slug: "mega-tall-tower-2",
+  //   name: "Mega Tall – Tower 2",
+  //   meta: [
+  //     ["Height", "555 m"],
+  //     ["Floors", "104"],
+  //     ["Location", "St. Petersburg, Russia"],
+  //     ["Year", "2022 – Continuing"],
+  //     ["Owner", "Rencons Construction"],
+  //   ],
+  //   scope: [
+  //     "Design / constructability review",
+  //     "Value engineering for structural engineering",
+  //     "Design solutions in collaboration with manufacturers",
+  //     "Coordination of façade systems with specialized suppliers",
+  //     "Coordination of vertical transportation systems",
+  //   ],
+  //   images: {
+  //     hero: "/projects/mega-tall-tower-2/hero.png",
+  //     top1: "/projects/mega-tall-tower-2/top1.png",
+  //     top2: "/projects/mega-tall-tower-2/top2.png",
+  //   },
+  // },
   {
     slug: "one-tower-mibc",
     name: "One Tower in MIBC",
@@ -238,38 +238,62 @@ export default function Projects() {
   useEffect(() => {
     if (!params.slug) navigate(`/projects/${PROJECTS[0].slug}`, { replace: true });
   }, [params.slug, navigate]);
-
   return (
-    <div className="space-y-10">
-      <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <h1 className="serif text-5xl font-light tracking-wide text-zinc-900">
-            Projects
-          </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-600">
-            Selected experience across international developments. Choose a project to view key details and scope.
-          </p>
-        </div>
-
-        <div className="w-full sm:w-[320px]">
-          <label className="mb-2 block text-xs font-semibold text-zinc-600">
+    <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+      {/* LEFT: selector */}
+      <aside className="lg:col-span-4">
+        <div className="lg:sticky lg:top-6">
+          <div className="mb-2 text-xs font-semibold text-zinc-600">
             Select project
-          </label>
-          <select
-            value={selected.slug}
-            onChange={(e) => navigate(`/projects/${e.target.value}`)}
-            className="h-11 w-full rounded-xl border border-zinc-300 bg-white px-3 text-sm text-zinc-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-zinc-300"
-          >
-            {PROJECTS.map((p) => (
-              <option key={p.slug} value={p.slug}>
-                {p.name}
-              </option>
-            ))}
-          </select>
-        </div>
-      </header>
+          </div>
 
-      <ProjectSlide project={selected} />
+          <div className="rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm">
+            <div className="max-h-[70vh] space-y-2 overflow-auto p-1">
+              {PROJECTS.map((p) => {
+                const checked = p.slug === selected.slug;
+
+                return (
+                  <button
+                    key={p.slug}
+                    type="button"
+                    onClick={() => navigate(`/projects/${p.slug}`)}
+                    className={[
+                      "w-full rounded-xl border px-3 py-2 text-left transition",
+                      checked
+                        ? "border-zinc-900 bg-zinc-50"
+                        : "border-zinc-200 hover:bg-zinc-50",
+                    ].join(" ")}
+                  >
+                    <div className="text-sm font-medium text-zinc-900">
+                      {p.name}
+                    </div>
+                    <div className="mt-0.5 text-xs text-zinc-600">
+                      {p.meta.find(([k]) => k === "Location")?.[1] ?? ""}
+                      {p.meta.find(([k]) => k === "Year")?.[1]
+                        ? ` • ${p.meta.find(([k]) => k === "Year")?.[1]}`
+                        : ""}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {/* RIGHT: content */}
+      <main className="space-y-6 lg:col-span-8">
+        <header>
+          <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+            Projects
+          </div>
+          <h1 className="serif mt-2 text-5xl font-light tracking-wide text-zinc-900">
+            {selected.name}
+          </h1>
+        </header>
+
+        <ProjectSlide project={selected} />
+      </main>
     </div>
   );
 }

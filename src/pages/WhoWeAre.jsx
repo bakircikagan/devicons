@@ -67,57 +67,72 @@ export default function WhoWeAre() {
 
       </section>
 
-
+      
       {/* OUR TEAM */}
       <section className="space-y-12">
-
         <h3 className="serif text-5xl font-light">Our Team</h3>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-          {[
+        {(() => {
+          const members = [
             {
               name: "Tumay Dogan, PE",
               role: "Managing Partner",
-              desc: "Structural Design Principal"
+              desc: "Structural Design Principal",
             },
             {
               name: "Kadri Filiz, MBA",
               role: "Managing Partner",
-              desc: "Architectural Design Principal"
+              desc: "Architectural Design Principal",
             },
             {
               name: "Alp Gol, PMP",
               role: "Construction Executive",
-              desc: ""
+              desc: "",
             },
             {
               name: "Zeycan Onder",
               role: "Architectural Consultant",
-              desc: ""
+              desc: "",
             },
             {
               name: "Mustafa Bektas, PE, SE",
               role: "Structural Design Manager",
-              desc: "Head of Inspection"
-            }
-          ].map((member) => (
-            <div
-              key={member.name}
-              className="rounded-xl bg-zinc-100 p-6 text-center shadow-sm"
-            >
+              desc: "Head of Inspection",
+            },
+          ];
+
+          const top = members.slice(0, 2);
+          const bottom = members.slice(2);
+
+          const Card = ({ member }) => (
+            <div className="rounded-xl bg-zinc-100 p-6 text-center shadow-sm">
               <div className="font-medium">{member.name}</div>
               <div className="mt-2 text-sm text-zinc-600">{member.role}</div>
-              {member.desc && (
+              {member.desc ? (
                 <div className="text-sm text-zinc-500">{member.desc}</div>
-              )}
+              ) : null}
             </div>
-          ))}
+          );
 
-        </div>
+          return (
+            <>
+              {/* Top row: 2 cards */}
+              <div className="grid gap-6 sm:grid-cols-2">
+                {top.map((member) => (
+                  <Card key={member.name} member={member} />
+                ))}
+              </div>
 
+              {/* Bottom row: 3 cards */}
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {bottom.map((member) => (
+                  <Card key={member.name} member={member} />
+                ))}
+              </div>
+            </>
+          );
+        })()}
       </section>
-
     </div>
   );
 }
