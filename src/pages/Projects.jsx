@@ -245,6 +245,64 @@ const PROJECTS = [
       top2: "/projects/almaty-financial-district/top2.png",
     },
   },
+  // Mix Projects
+  {
+    slug: "mix-projects",
+    name: "Mix Projects",
+    meta: [
+      ["Location", "Various"],
+      ["Year", "Selected"],
+    ],
+    type: "mix",
+    items: [
+      {
+        title: "432 Park Avenue",
+        subtitle: "Special Inspection Services",
+        image: "/projects/mix/432-park.png",
+      },
+      {
+        title: "Trinidad & Tobago Waterfront",
+        subtitle: "Schematic, Design Development and Construction Documents",
+        image: "/projects/mix/trinidad-tobago.png",
+      },
+      {
+        title: "Central Park Tower",
+        subtitle:
+          "98 Story Building – 472 meters\nInspection of Concrete Cast-In-Place, Post-Tensioned Floors, Foundation, Composite Steel Floors, Welding, Underpinning, and Non-Destructive Testing (NDT)",
+        image: "/projects/mix/central-park-tower.png",
+      },
+      {
+        title: "157 West 57th Street",
+        subtitle:
+          "73 Story Building – 306 meters\nInspection of Concrete Cast-In-Place, Post-Tensioned Floors, Foundation, Composite Steel Floors, Welding, Underpinning, and Non-Destructive Testing (NDT)",
+        image: "/projects/mix/157-west-57.png",
+      },
+      {
+        title: "Hudson Rise Hotel & Residential",
+        subtitle:
+          "Feasibility Analysis of existing development for an international firm",
+        image: "/projects/mix/hudson-rise.png",
+      },
+      {
+        title: "Andromeda Gold Residence",
+        subtitle:
+          "Design / Constructability Review and Value Engineering for Structural Engineering",
+        image: "/projects/mix/andromeda-gold.png",
+      },
+      {
+        title: "Levent 199 Tower",
+        subtitle:
+          "Design / Constructability Review and Value Engineering for Structural Engineering",
+        image: "/projects/mix/levent-199.png",
+      },
+      {
+        title: "Skyland Istanbul",
+        subtitle:
+          "Schematic and Design Development for Structural Engineering",
+        image: "/projects/mix/skyland-istanbul.png",
+      },
+    ],
+  },
 ];
 
 function findProject(slug) {
@@ -290,10 +348,15 @@ export default function Projects() {
                       {p.name}
                     </div>
                     <div className="mt-0.5 text-xs text-zinc-600">
-                      {p.meta.find(([k]) => k === "Location")?.[1] ?? ""}
-                      {p.meta.find(([k]) => k === "Year")?.[1]
-                        ? ` • ${p.meta.find(([k]) => k === "Year")?.[1]}`
-                        : ""}
+                      {(() => {
+                        const meta = p.meta ?? [];
+                        const loc = meta.find(([k]) => k === "Location")?.[1];
+                        const year = meta.find(([k]) => k === "Year")?.[1];
+
+                        if (!loc && !year) return "—"; // mix gibi meta olmayanlar için
+
+                        return `${loc ?? ""}${year ? ` • ${year}` : ""}`;
+                      })()}
                     </div>
                   </button>
                 );
@@ -321,6 +384,9 @@ export default function Projects() {
 }
 
 function ProjectSlide({ project }) {
+  if (project.type === "mix") {
+    return <MixProjectsSlide project={project} />;
+  }
   return (
     <section className="grid gap-10 lg:grid-cols-12 lg:items-start">
       {/* Left large image */}
@@ -402,6 +468,36 @@ function ProjectSlide({ project }) {
             </div>
           )}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function MixProjectsSlide({ project }) {
+  return (
+    <section className="space-y-6">
+      {/* title zaten header'da project.name olarak görünüyor */}
+      <div className="grid gap-6 lg:grid-cols-4">
+        {project.items.map((it) => (
+          <div key={it.title} className="space-y-2">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+              <img
+                src={it.image}
+                alt={it.title}
+                className="h-48 w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="text-xs font-semibold uppercase tracking-wide text-zinc-800">
+              {it.title}
+            </div>
+
+            <div className="text-xs leading-relaxed text-zinc-600 whitespace-pre-line">
+              {it.subtitle}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
