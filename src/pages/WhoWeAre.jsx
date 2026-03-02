@@ -13,7 +13,10 @@ export default function WhoWeAre() {
 
           <p className="text-zinc-600 leading-relaxed">
             We are an independent, investor-side technical advisory firm specializing 
-            in high-rise and complex real estate developments. We align development, 
+            in high-rise and complex real estate developments.
+          </p>
+          <p className="text-zinc-600 leading-relaxed">
+            We align development, 
             design and construction with cost, schedule and risk control — representing 
             the Owner’s/Investor’s interests at every stage.
           </p>
@@ -99,7 +102,8 @@ export default function WhoWeAre() {
           const bottom = members.slice(2);
 
           const Card = ({ member }) => (
-            <div className="rounded-xl bg-zinc-100 p-6 text-center shadow-sm">
+            // <div className="rounded-xl bg-zinc-100 p-6 text-center shadow-sm">
+            <div className="rounded-2xl bg-zinc-200 p-8 text-center border border-zinc-300">
               <div className="font-medium">{member.name}</div>
               <div className="mt-2 text-sm text-zinc-600">{member.role}</div>
               {member.desc ? (

@@ -157,7 +157,6 @@ const PROJECTS = [
       hero: "/projects/neva/hero.png",
       top1: "/projects/neva/top1.png",
       top2: "/projects/neva/top2.png",
-      top3: "/projects/neva/top3.png",
     },
     pastExperience: true
   },
@@ -182,7 +181,6 @@ const PROJECTS = [
       hero: "/projects/icity-business-center/hero.png",
       top1: "/projects/icity-business-center/top1.png",
       top2: "/projects/icity-business-center/top2.png",
-      top3: "/projects/icity-business-center/top3.png",
     },
     pastExperience: true
   },
@@ -221,13 +219,12 @@ const PROJECTS = [
       hero: "/projects/lakhta-center-multifunctional/hero.png",
       top1: "/projects/lakhta-center-multifunctional/top1.png",
       top2: "/projects/lakhta-center-multifunctional/top2.png",
-      top3: "/projects/lakhta-center-multifunctional/top3.png",
     },
     pastExperience: true
   },
   {
     slug: "almaty-financial-district",
-    name: "Almaty Financial District – 32 Buildings",
+    name: "Almaty Financial District - Turan, Alliance, Markova, Park and Furmanova Site - 32 Buildings",
     meta: [
       ["Location", "Almaty, Kazakhstan"],
       ["Year", "2006 – 2009"],
@@ -462,7 +459,7 @@ function ProjectSlide({ project }) {
             ))}
           </ul>
           {project.pastExperience && (
-            <div className="mt-4 text-[12px] italic text-zinc-400 tracking-wide">
+            <div className="mt-4 text-[12px] italic text-zinc-900 tracking-wide">
               *Past Experiences in Rencons
             </div>
           )}

@@ -11,31 +11,37 @@ const nav = [
 export default function SiteLayout() {
   return (
     <div className="min-h-screen bg-zinc-100 text-zinc-900">
-        <header className="sticky top-0 z-20 border-b border-zinc-200 bg-zinc-100/80 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] items-center gap-10 px-4 py-4 sm:px-6">
-        <NavLink to="/" className="flex items-center gap-3">
+      {/* HEADER (bigger) */}
+      <header className="sticky top-0 z-20 border-b border-zinc-200 bg-zinc-200">
+        <div className="mx-auto flex max-w-[1400px] items-center gap-10 px-4 py-8 sm:px-6">
+          <NavLink to="/" className="flex items-center gap-5">
             <img
-                src="/devicons-logo.png"
-                alt="DEVICONS"
-                className="h-9 w-auto"
-                loading="eager"
+              src="/devicons-logo.png"
+              alt="devicons"
+              className="h-14 w-auto"
+              loading="eager"
             />
+
             <div className="leading-tight">
-                <div className="text-sm font-semibold tracking-tight">DEVICONS</div>
-                <div className="text-xs text-zinc-500">Architecture, Engineering, Design & Development Management</div>
+              <div className="text-xl font-semibold tracking-tight lowercase">
+                devicons
+              </div>
+              <div className="mt-1 text-base text-zinc-600">
+                Architecture, Engineering, Design &amp; Development Management
+              </div>
             </div>
-        </NavLink>
+          </NavLink>
 
-
-          <nav className="ml-auto hidden items-center gap-6 text-sm text-zinc-600 md:flex">
+          <nav className="ml-auto hidden items-center gap-10 text-lg text-zinc-600 md:flex">
             {nav.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
+                end={item.to === "/"}
                 className={({ isActive }) =>
                   isActive
                     ? "text-zinc-900 font-semibold underline underline-offset-8 decoration-zinc-300"
-                    : "hover:text-zinc-900"
+                    : "hover:text-zinc-900 transition-colors"
                 }
               >
                 {item.label}
@@ -45,13 +51,15 @@ export default function SiteLayout() {
         </div>
       </header>
 
-        <main className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6">
-            <Outlet />
-        </main>
+      {/* MAIN */}
+      <main className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6">
+        <Outlet />
+      </main>
 
+      {/* FOOTER */}
       <footer className="border-t border-zinc-200 bg-zinc-100 py-10">
         <div className="mx-auto max-w-[1400px] px-4 text-xs text-zinc-500 sm:px-6">
-          © {new Date().getFullYear()} DEVICONS. All rights reserved.
+          © {new Date().getFullYear()} devicons. All rights reserved.
         </div>
       </footer>
     </div>

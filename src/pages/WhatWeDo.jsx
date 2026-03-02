@@ -8,66 +8,76 @@ export default function WhatWeDo() {
         </h1>
       </section>
 
-      {/* ===== THREE CORE AREAS ===== */}
-      <section className="grid gap-12 lg:grid-cols-3">
-        {/* Development */}
-        <div className="space-y-6 text-center">
-          <img
-            src="/dev.png"
-            alt="Development"
-            className="mx-auto h-64 w-full rounded-xl object-cover"
-          />
-          <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
-            DESIGN & DEVELOPMENT MANAGEMENT
-          </h2>
-          <p className="text-sm leading-relaxed text-zinc-600">
-            We manage real estate development on behalf of the Owner/Investor, 
-            with a strong focus on high-rise and complex mixed-use projects.
-            Our scope includes feasibility and market assessments, 
-            defining scope, budget and schedule, coordinating concept and detailed 
-            design with leading architects and engineers, managing permitting processes, 
-            financial oversight and risk monitoring - ensuring early alignment between strategy, 
-            design integrity and long-term asset value.
-          </p>
-        </div>
+  {/* ===== THREE CORE AREAS ===== */}
+  <section className="grid gap-12 lg:grid-cols-3 items-stretch">
+    {/* Development */}
+    <div className="text-center flex h-full flex-col">
+      <img
+        src="/dev.png"
+        alt="Development"
+        className="mx-auto h-64 w-full rounded-xl object-cover"
+      />
 
-        {/* Preconstruction */}
-        <div className="space-y-6 text-center">
-          <img
-            src="/precon.png"
-            alt="Preconstruction"
-            className="mx-auto h-64 w-full rounded-xl object-cover"
-          />
-          <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
-            PRECONSTRUCTION
-          </h2>
-          <p className="text-sm leading-relaxed text-zinc-600">
-              Devicons leads preconstruction planning to ensure projects are fully aligned before execution begins.
-              We assess feasibility, permitting risks, constructability, phasing strategies and budget alignment while refining scope, schedules and mitigation plans. 
-              Through design optimization and value engineering, we identify cost-saving opportunities early and establish a clear execution roadmap.
-          </p>
-        </div>
+      {/* SABİT BAŞLIK ALANI */}
+      <div className="mt-6 flex min-h-[92px] items-center justify-center">
+        <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
+          DESIGN & DEVELOPMENT MANAGEMENT
+        </h2>
+      </div>
 
-        {/* Construction */}
-        <div className="space-y-6 text-center">
-          <img
-            src="/construction.png"
-            alt="Construction Management"
-            className="mx-auto h-64 w-full rounded-xl object-cover"
-          />
-          <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
-            CONSTRUCTION MANAGEMENT
-          </h2>
-          <p className="text-sm leading-relaxed text-zinc-600">
-            Devicons represents the investor throughout construction, ensuring disciplined control of cost, 
-            schedule and quality. Construction management requires discipline, 
-            experience and proactive leadership. 
-            We monitor execution, evaluate changes and act early to prevent issues - protecting 
-            investor interests rather than merely reporting project status.
+      <p className="text-sm leading-relaxed text-zinc-600">
+        We manage real estate development on behalf of the Owner/Investor,
+        with a strong focus on high-rise and complex mixed-use projects.
+        Our scope includes feasibility and market assessments,
+        defining scope, budget and schedule, coordinating concept and detailed
+        design with leading architects and engineers, managing permitting processes,
+        financial oversight and risk monitoring - ensuring early alignment between strategy,
+        design integrity and long-term asset value.
+      </p>
+    </div>
 
-          </p>
-        </div>
-      </section>
+    {/* Preconstruction */}
+    <div className="text-center flex h-full flex-col">
+      <img
+        src="/precon.png"
+        alt="Preconstruction"
+        className="mx-auto h-64 w-full rounded-xl object-cover"
+      />
+
+      <div className="mt-6 flex min-h-[92px] items-center justify-center">
+        <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
+          PRECONSTRUCTION
+        </h2>
+      </div>
+
+      <p className="text-sm leading-relaxed text-zinc-600">
+        Devicons leads preconstruction planning to ensure projects are fully aligned before execution begins.
+        We assess feasibility, permitting risks, constructability, phasing strategies and budget alignment while refining scope, schedules and mitigation plans.
+        Through design optimization and value engineering, we identify cost-saving opportunities early and establish a clear execution roadmap.
+      </p>
+    </div>
+
+    {/* Construction */}
+    <div className="text-center flex h-full flex-col">
+      <img
+        src="/construction.png"
+        alt="Construction Management"
+        className="mx-auto h-64 w-full rounded-xl object-cover"
+      />
+
+      <div className="mt-6 flex min-h-[92px] items-center justify-center">
+        <h2 className="serif text-2xl tracking-[0.2em] text-zinc-800">
+          CONSTRUCTION MANAGEMENT
+        </h2>
+      </div>
+
+      <p className="text-sm leading-relaxed text-zinc-600">
+        Devicons represents the investor throughout construction, ensuring disciplined control of cost,
+        schedule and quality. Construction management requires discipline, experience and proactive leadership.
+        We monitor execution, evaluate changes and act early to prevent issues - protecting investor interests rather than merely reporting project status.
+      </p>
+    </div>
+  </section>
 
       {/* ===== OUR SERVICES SECTION ===== */}
       <section className="grid gap-16 lg:grid-cols-12 lg:items-center">
@@ -78,7 +88,7 @@ export default function WhatWeDo() {
           <div className="rounded-2xl bg-zinc-200 p-8">
             <ul className="space-y-3 text-sm leading-relaxed text-zinc-700">
               <li>• Designer & Consultant Selection Strategy</li>
-              <li>• Integrated Design Management (All Disciplines)</li>  
+              <li>• Integrated Design Management (All Disciplines)</li>
               <li>• Architectural & Structural Design Oversight</li>
               <li>• Tender Strategy & Contractor Alignment</li>
               <li>• Construction Phase Technical Advisory & Risk Control</li>

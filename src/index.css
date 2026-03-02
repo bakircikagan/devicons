@@ -9,16 +9,21 @@ body {
   background: #fafafa; /* zinc-50 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-body {
-  font-family: 'Inter', sans-serif;
-}
-
-.serif {
-  font-family: 'Playfair Display', serif;
-}
-
-html, body, #root {
+  /* TEK FONT */
   font-family: "Tenor Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Tailwind'de kullandığın serif class'ı da aynı font olsun */
+.serif {
+  font-family: "Tenor Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+/* Form elemanları bazen ayrı font alır */
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100%;
 }
