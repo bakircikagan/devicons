@@ -18,16 +18,15 @@ export default function SiteLayout() {
             <img
               src="/devicons-logo.png"
               alt="devicons"
-              className="h-14 w-auto"
+              className="h-25 w-auto"
               loading="eager"
             />
 
             <div className="leading-tight">
-              <div className="text-xl font-semibold tracking-tight lowercase">
-                devicons
-              </div>
-              <div className="mt-1 text-base text-zinc-600">
-                Architecture, Engineering, Design &amp; Development Management
+              <div className="mt-7 text-xl text-zinc-600 leading-snug">
+                Architecture, Engineering
+                <br />
+                Design &amp; Development Management
               </div>
             </div>
           </NavLink>
@@ -39,9 +38,12 @@ export default function SiteLayout() {
                 to={item.to}
                 end={item.to === "/"}
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-zinc-900 font-semibold underline underline-offset-8 decoration-zinc-300"
-                    : "hover:text-zinc-900 transition-colors"
+                  [
+                    "transition-colors",
+                    isActive
+                      ? "font-bold text-zinc-900"
+                      : "font-normal text-zinc-600 hover:text-zinc-900",
+                  ].join(" ")
                 }
               >
                 {item.label}
@@ -59,7 +61,7 @@ export default function SiteLayout() {
       {/* FOOTER */}
       <footer className="border-t border-zinc-200 bg-zinc-100 py-10">
         <div className="mx-auto max-w-[1400px] px-4 text-xs text-zinc-500 sm:px-6">
-          © {new Date().getFullYear()} devicons. All rights reserved.
+          © {new Date().getFullYear()} DEVICONS. All rights reserved.
         </div>
       </footer>
     </div>

@@ -3,31 +3,37 @@ export default function WhoWeAre() {
     <div className="space-y-32">
 
       {/* WHO WE ARE */}
-      <section className="grid gap-12 lg:grid-cols-2 lg:items-start">
-        
-        {/* Left text */}
+      <section className="grid gap-12 lg:grid-cols-2 lg:items-stretch">
+        {/* Left */}
         <div className="space-y-8">
-          <h2 className="serif text-5xl font-light tracking-wide">
-            Who we are
-          </h2>
+          <h1 className="serif text-6xl font-light text-zinc-900">Who we are</h1>
 
-          <p className="text-zinc-600 leading-relaxed">
-            We are an independent, investor-side technical advisory firm specializing 
+          <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
+            We are an independent, investor-side technical advisory firm specializing
             in high-rise and complex real estate developments.
           </p>
-          <p className="text-zinc-600 leading-relaxed">
-            We align development, 
-            design and construction with cost, schedule and risk control — representing 
-            the Owner’s/Investor’s interests at every stage.
+
+          <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
+            We align development, design and construction with cost, schedule and risk
+            control — representing the Owner&apos;s/Investor&apos;s interests at every stage.
           </p>
 
-          <ul className="space-y-3 text-zinc-700">
+          <ul className="space-y-3 text-lg leading-relaxed text-zinc-700">
             <li>• Independent Technical Partner for Owners / Investors</li>
             <li>• We work exclusively in the interest of the Owner/Investor</li>
             <li>• One Technical Voice on Behalf of the Owner/Investor</li>
             <li>• We step in before problems become costs</li>
             <li>• Owner-Focused services across the project lifecycle</li>
           </ul>
+        </div>
+        {/* Right */}
+        <div className="flex h-full items-end justify-center lg:justify-end">
+          <img
+            src="/who-we-are.png"
+            alt="Who we are"
+            className="w-full max-w-[450px] object-contain mix-blend-multiply -scale-x-100"
+            loading="lazy"
+          />
         </div>
       </section>
 
